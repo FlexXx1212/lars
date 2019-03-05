@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>OBS Subscribe To Youtube</title>
+    <style>
+        body {
+            background: #00ff00;
+        }
+
+        #main {
+            border-radius: 10px;
+            background: white;
+            width: 600px;
+            height: 120px;
+        }
+        
+        #subButton {
+            background: red;
+            border-radius: 5px;
+            width: 30%;
+            height: 30%;
+            float: right;
+            margin-top: 40px;
+            margin-right: 30px;
+        }
+
+        #subButtonText {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            font-family: arial;
+            margin-top: 3%;
+        }
+
+        #channel {
+            float: left;
+            width: 340px;
+        }
+
+        #channelIcon {
+            float: left;
+            border-radius: 50%;
+            width: 90px;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        #channelStats {
+            float: right;
+        }
+
+        #channelName {
+            float: right;
+            color: black;
+            font-size: 35px;
+            text-align: center;
+            font-family: arial;
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+
+        #subText {
+            color: black;
+            font-size: 15px;
+            text-align: left;
+            font-family: arial;
+            margin-bottom: 50px;
+        }
+
+        .grow{
+            -webkit-transform:scale(1.0);
+            -moz-transform:scale(1.0);
+            -ms-transform:scale(1.0);
+            transform:scale(1.0);
+            transition: 300ms;
+        }
+
+        .shrunk {
+            -webkit-transform:scale(0);
+            -moz-transform:scale(0);
+            -ms-transform:scale(0);
+            transform:scale(0);
+            transition: 300ms;
+        }
+
+        .clicked {
+            background: lightgray !important;
+            color: gray !important;
+        }
+
+        #pointer {
+            position: absolute;
+            top: 160px;
+            right: 70px;
+            width: 20px;
+            visibility: hidden;
+        }
+
+        .flyIn {
+            -webkit-transform:translate(-30px,-100px);
+            -moz-transform:translate(-30px,-100px);
+            -ms-transform:translate(-30px,-100px);
+            transform:translate(-30px,-100px);
+            transition: 500ms;
+        }
+
+        .flyOut {
+            -webkit-transform:translate(30px,100px);
+            -moz-transform:translate(30px,100px);
+            -ms-transform:translate(30px,100px);
+            transform:translate(30px,100px);
+            transition: 500ms;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="shrunk">
+        <div id="channel">
+            <img id="channelIcon" src="photo.png" alt="channel icon">
+            <div id="channelStats">
+                <p id="channelName">FlexLetsPlay</p>
+                <p id="subText">0 Abonnenten</p>
+            </div>
+        </div>
+        <div id="subButton">
+            <p id="subButtonText">ABONNIEREN</p>
+        </div>
+        <img id="pointer" src="pointer.png" alt="p">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
